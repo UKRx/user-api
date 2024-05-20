@@ -1,0 +1,17 @@
+{
+  "name": "cart-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cart.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha \"test/**/*.mjs\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
+  }
+}
