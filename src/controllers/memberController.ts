@@ -18,7 +18,7 @@ export const registerMember = (req: Request, res: Response): void => {
 };
 
 export const getMemberProfile = (req: Request, res: Response): void => {
-    const userId = req.user!.id; // Add ! to assert that user is not undefined
+    const userId = req.user!.id;
     const member = members.find(m => m.id === userId);
     if (!member) {
         res.status(404).json({ message: 'Member not found' });
@@ -30,7 +30,7 @@ export const getMemberProfile = (req: Request, res: Response): void => {
 };
 
 export const editMemberProfile = (req: Request, res: Response): void => {
-    const userId = req.user!.id; // Add ! to assert that user is not undefined
+    const userId = req.user!.id;
     const { dateOfBirth, gender, address, subscribeToNewsletter } = req.body;
     const member = members.find(m => m.id === userId);
     if (!member) {
@@ -45,7 +45,7 @@ export const editMemberProfile = (req: Request, res: Response): void => {
 };
 
 export const deleteMember = (req: Request, res: Response): void => {
-    const userId = req.user!.id; // Add ! to assert that user is not undefined
+    const userId = req.user!.id;
     const memberIndex = members.findIndex(m => m.id === userId);
     if (memberIndex === -1) {
         res.status(404).json({ message: 'Member not found' });

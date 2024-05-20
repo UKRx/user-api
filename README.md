@@ -1,40 +1,12 @@
-RESTful API for Commerce Services
-
-This project implements a RESTful API to bridge between the frontend and the data source for our commerce services. The API supports various member-related functionalities including registration, profile management, and password changes.
-
-Table of Contents
-
-Installation
-Usage
-API Endpoints
-Register Member
-Get Profile
-Edit Profile
-Delete Account
-Change Password
-Testing the API
-Installation
-
-Clone the repository:
-
-sh
-Copy code
 git clone https://github.com/UKRx/user-api.git
 cd user-api
 Install dependencies:
-
-sh
-Copy code
 npm install
 Compile the TypeScript code:
 
-sh
-Copy code
 npx tsc
 Run the application:
 
-sh
-Copy code
 node dist/app.js
 Usage
 
@@ -140,10 +112,3 @@ curl -X POST http://localhost:3000/auth/change-password \
  -H "Authorization: Bearer faketoken_user1" \
  -H "Content-Type: application/json" \
  -d '{"currentPassword": "password123", "newPassword": "newpassword123", "confirmPassword": "newpassword123"}'
-Further Enhancements
-
-This basic implementation provides a good starting point for your RESTful API project. Future enhancements can include:
-
-Connecting to a real database.
-Adding more robust error handling.
-Improving security measures.

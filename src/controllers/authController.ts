@@ -3,7 +3,7 @@ import members from '../models/memberModel';
 
 export const changePassword = (req: Request, res: Response): void => {
   const { currentPassword, newPassword, confirmPassword } = req.body;
-  const userId = req.user!.id; // Add ! to assert that user is not undefined
+  const userId = req.user!.id;
   const member = members.find(m => m.id === userId);
 
   if (!member || member.password !== currentPassword) {
